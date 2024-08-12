@@ -386,7 +386,8 @@
     <div class="w-fit gap-3 mx-auto flex story-ul ">
 
 
-      
+
+
 
       <!-- item digi-->
       <div class="w-48 h-[300px]    duration-300  bg-[#e0324e]  ">
@@ -410,328 +411,36 @@
 
       </div>
 
-
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+{% for Pro_Item in Product_Item %}
+      	<div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white rounded-lg">
         <div class="p-4 ">
           <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+            src="{{ Pro_Item.Pictur.url }}" />
         </div>
         <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+          <h2>{{ Pro_Item.Name }}
 
           </h2>
         </div>
         <div class="flex justify-between  p-4 capitalize text-xl font-medium">
           <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3 class="capitalize text-right  text-black text-sm font-medium">  {{ Pro_Item.OfferPrice }}تومان</h3>
+              {% if Pro_Item.OfferPrice %}
+
+              {% endif %}
             <h3
               class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
+              {{ Tkhfif }}%</h3>
 
           </div>
           <div>
           </div>
         </div>
         <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">{{ Pro_Item.Price }}تومان</h4>
         </div>
       </div>
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
-            <h3
-              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
-
-          </div>
-          <div>
-          </div>
-        </div>
-        <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
-        </div>
-      </div>
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
-            <h3
-              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
-
-          </div>
-          <div>
-          </div>
-        </div>
-        <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
-        </div>
-      </div>
-
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
-            <h3
-              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
-
-          </div>
-          <div>
-          </div>
-        </div>
-        <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
-        </div>
-      </div>
-
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
-            <h3
-              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
-
-          </div>
-          <div>
-          </div>
-        </div>
-        <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
-        </div>
-      </div>
-
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
-            <h3
-              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
-
-          </div>
-          <div>
-          </div>
-        </div>
-        <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
-        </div>
-      </div>
-
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
-            <h3
-              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
-
-          </div>
-          <div>
-          </div>
-        </div>
-        <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
-        </div>
-      </div>
-
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
-            <h3
-              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
-
-          </div>
-          <div>
-          </div>
-        </div>
-        <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
-        </div>
-      </div>
-
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
-            <h3
-              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
-
-          </div>
-          <div>
-          </div>
-        </div>
-        <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
-        </div>
-      </div>
-
-
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
-            <h3
-              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
-
-          </div>
-          <div>
-          </div>
-        </div>
-        <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
-        </div>
-      </div>
-
-
-
-
-      <!-- card item -->
-      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
-            <h3
-              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              27%</h3>
-
-          </div>
-          <div>
-          </div>
-        </div>
-        <div>
-          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
-        </div>
-      </div>
-
-
-
+      {% endfor %}
 
 
 
@@ -787,43 +496,19 @@ width: 75%;    margin-top: 2%;
       <div class="flex-none w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center relative">
         <span class="text-green-500">بیش از 40 کالا</span>
       </div>
-      <div class="flex-none w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center relative">
+
+      {% for ProItm in Product_Item %}
+          {% if limit_t %}
+          	<div class="flex-none w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center relative">
         <img
-          src="https://dkstatics-public.digikala.com/digikala-products/65e392e90527288413c36ba1651678a791268c17_1690280043.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
-          alt="Product 1" class="w-full h-full object-cover rounded-full">
-        <span class="absolute bg-red-500 text-white text-xs px-2 py-1 rounded-full bottom-1">۳۵٪</span>
-      </div>
-      <div class="flex-none w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center relative">
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-products/a97445902a5b3b34e0cb97358f3d6926fdae4afa_1658851196.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
-          alt="Product 2" class="w-full h-full object-cover rounded-full">
-        <span class="absolute bg-red-500 text-white text-xs px-2 py-1 rounded-full bottom-1">۳۵٪</span>
-      </div>
-      <div class="flex-none w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center relative">
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-products/dbcbb36ee78879f086f5611a11a52d54671f910e_1664889298.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
-          alt="Product 3" class="w-full h-full object-cover rounded-full">
-        <span class="absolute bg-red-500 text-white text-xs px-2 py-1 rounded-full bottom-1">۴۰٪</span>
-      </div>
-      <div class="flex-none w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center relative">
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-products/6d196b2709c5ea246e8143387c421cf721b0afb8_1695630976.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
-          alt="Product 4" class="w-full h-full object-cover rounded-full">
-        <span class="absolute bg-red-500 text-white text-xs px-2 py-1 rounded-full bottom-1">۴۰٪</span>
-      </div>
-      <div class="flex-none w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center relative">
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-products/480a3ca2878bfb554e4ad898bdb666333c1bff40_1676881955.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
-          alt="Product 5" class="w-full h-full object-cover rounded-full">
-        <span class="absolute bg-red-500 text-white text-xs px-2 py-1 rounded-full bottom-1">۴۰٪</span>
-      </div>
-      <div class="flex-none w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center relative">
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-products/0e2a731475c21826364dea7b3919078d5019d178_1704871862.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+          src="{{ ProItm.Pictur.url }}"
           alt="Product 6" class="w-full h-full object-cover rounded-full">
-        <span class="absolute bg-red-500 text-white text-xs px-2 py-1 rounded-full bottom-1">۴۳٪</span>
+        <span class="absolute bg-red-500 text-white text-xs px-2 py-1 rounded-full bottom-1">{{ Tkhfif }}%</span>
       </div>
     </div>
+          {% endif %}
+      {% endfor %}
+
 
     <!-- Promotion Banner -->
     <div class="flex-shrink-0 bg-green-100 text-green-700 p-4 rounded-lg flex items-center space-x-2 w-full md:w-auto"
@@ -882,78 +567,16 @@ width: 75%;    margin-top: 2%;
     width: 77%;   margin-top: 2.3%;" class="max-w-6xl mx-auto p-4" id="categoryy">
     <h1 class="text-2xl font-bold text-center mb-8">خرید بر اساس دسته‌بندی</h1>
     <div class="grid grid-cols-3 md:grid-cols-6 gap-6 text-center">
-      <div>
+
+      {% for CatItm in Category_Items %}
+      	<div>
         <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/0cefa48f5c58adbbde8c5a76b22ee49de0e667f5_1692600876.png"
-          alt="category1" class="w-20 h-20 mx-auto mb-2">
-        <p>آرایشی و بهداشتی</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/d17e98a20e1681c7bac5af856aa9552250ec9a96_1710666504.png"
-          alt="category2" class="w-20 h-20 mx-auto mb-2">
-        <p>طلا و نقره</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/5795b31a635f1e23df96a908c009f31744ede38f_1692600481.png"
-          alt="category3" class="w-20 h-20 mx-auto mb-2">
-        <p>مد و پوشاک</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/c16b7dff700a9d99880174c32ec233d20ddb531c_1703057953.png"
-          alt="category4" class="w-20 h-20 mx-auto mb-2">
-        <p>لوازم خانگی برقی</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/0c3cc1cb589df1c74c4ad95a742bb6df967956a8_1692600390.png"
-          alt="category5" class="w-20 h-20 mx-auto mb-2">
-        <p>خانه و آشپزخانه</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/3582bbed0a53318c2332d2c79b051b226f02a3bb_1692600677.png"
-          alt="category6" class="w-20 h-20 mx-auto mb-2">
-        <p>کتاب، لوازم تحریر و هنر</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/8f80e75e4c2dca42ee0538e100c7a7b05455aa88_1692600287.png"
-          alt="category7" class="w-20 h-20 mx-auto mb-2">
-        <p>کالای دیجیتال</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/aba1e5dca8958ac1176e25cd194ff8ac622cd383_1692600155.png"
-          alt="category8" class="w-20 h-20 mx-auto mb-2">
-        <p>موبایل</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/af02140ea60e0fd478b09b279976a095c95615b6_1692601283.png"
-          alt="category9" class="w-20 h-20 mx-auto mb-2">
-        <p>محصولات بومی و محلی</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/0c46d2532d61dd3a5b6a3afc17552c23c1b4d39e_1692600773.png"
-          alt="category10" class="w-20 h-20 mx-auto mb-2">
-        <p>اسباب، بازی، کودک و نوزاد</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/da24c42172585abb0c328accf85d071049c4253e_1692600598.png"
-          alt="category11" class="w-20 h-20 mx-auto mb-2">
-        <p>کالای خوراکی و اساسی</p>
-      </div>
-      <div>
-        <img
-          src="https://dkstatics-public.digikala.com/digikala-mega-menu/20c179dff5c513104599d33858b6b11e77ced9b4_1692601532.png"
+          src="{{ CatItm.Image.url }}"
           alt="category12" class="w-20 h-20 mx-auto mb-2">
-        <p>کارت هدیه و کيفيت کارت</p>
+        <p>{{ CatItm.Name }}</p>
       </div>
+      {% endfor %}
+
 
     </div>
   </div>

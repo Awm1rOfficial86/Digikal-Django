@@ -31,6 +31,8 @@ class Product(models.Model):
     Star = models.IntegerField(default=0, validators=(MinValueValidator(0), MaxValueValidator(5)))
     Offer = models.BooleanField(default=False)
     OfferPrice = models.IntegerField(default=0)
+    Count = models.IntegerField(default=0)
+
 
     def __str__(self):
         return self.Name
