@@ -33,7 +33,6 @@ class Product(models.Model):
     OfferPrice = models.IntegerField(default=0)
     Count = models.IntegerField(default=0)
 
-
     def __str__(self):
         return self.Name
 
@@ -62,4 +61,12 @@ class News(models.Model):
     def __str__(self):
         return self.Title
 
+
 # Create your models here.
+
+class Advertising1(models.Model):
+    Image = models.ImageField(upload_to='upload/ads1/', default='')
+
+
+class Advertising2(models.Model):
+    Image = models.ImageField(upload_to='upload/ads2/', default='')
