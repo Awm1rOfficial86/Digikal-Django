@@ -1,7 +1,6 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
-
   <img
     src="https://dkstatics-public.digikala.com/digikala-adservice-banners/4a7f0599be8dcdded4b9c3c55b3a9908f9e27735_1723350373.jpg?x-oss-process=image/quality,q_95/format,webp"
     alt="">
@@ -237,17 +236,13 @@
     <!-- Slider container -->
     <div id="slider" class="flex transition-transform duration-500 ease-out">
       <!-- Slide 1 -->
-
-      {% for Sl_Item in Slider_Item %}
-      		<div class="flex-shrink-0 w-full">
+   {% for Sl_Item in Slider_Item %}
+     	 <div class="flex-shrink-0 w-full">
         <img
           src="{{ Sl_Item.Image.url }}"
           alt="Slide 1" class="w-full h-96  object-cover">
       </div>
-
-      {% endfor %}
-      
-
+     {% endfor %}
       <!-- Slide 2 -->
 
     </div>
@@ -391,13 +386,7 @@
     <div class="w-fit gap-3 mx-auto flex story-ul ">
 
 
-{#      <img id="right-img-story" class="bg-white"#}
-{#        src="/assets/img/1904671-arrow-arrow-right-change-direction-next-page-right_122521.png" alt="" style="">#}
-{##}
-{##}
-{#      <img id="left-img-story" class="bg-white"#}
-{#        src="/assets/img/1904658-arrow-arrow-left-change-direction-left-next-undo_122508.png" alt="" style="">#}
-
+      
 
       <!-- item digi-->
       <div class="w-48 h-[300px]    duration-300  bg-[#e0324e]  ">
@@ -1814,6 +1803,7 @@ width: 75%;    margin-top: 2%;
       <div class="flex flex-col md:flex-row justify-between items-center text-gray-700 text-center md:text-right mb-8">
         <div class="flex flex-col items-center mb-6 md:mb-0">
 
+          class="w-12 h-12 mb-2">
           <span>ضمانت اصل بودن کالا</span>
         </div>
         <div class="flex flex-col items-center mb-6 md:mb-0">
@@ -1915,9 +1905,8 @@ width: 75%;    margin-top: 2%;
       </div>
     </div>
   </footer>
-
-
-
-
-
 {% endblock %}
+
+
+
+
