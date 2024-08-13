@@ -70,3 +70,9 @@ class Advertising1(models.Model):
 
 class Advertising2(models.Model):
     Image = models.ImageField(upload_to='upload/ads2/', default='')
+
+from django.db import models
+
+
+
+

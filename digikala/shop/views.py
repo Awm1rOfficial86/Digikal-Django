@@ -9,10 +9,11 @@ from .models import *
 def index(request):
     global k, limit_t
     Slider_Item = SliderItem.objects.all()
-    Product_Items = Product.objects.all()
+    Product_Items = Product.objects.all().order_by('-Count')
     Category_Items = Category.objects.all()
     Advertising1_Items = Advertising1.objects.all()
     Advertising2_Items = Advertising2.objects.all()
+
     for Item in Product_Items:
         Pr_It = int(Item.Price)
         PrOf_It = int(Item.Price)
