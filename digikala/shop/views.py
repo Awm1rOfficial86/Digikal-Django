@@ -13,6 +13,7 @@ def index(request):
     Category_Items = Category.objects.all()
     Advertising1_Items = Advertising1.objects.all()
     Advertising2_Items = Advertising2.objects.all()
+    News_Items = News.objects.all()
 
     for Item in Product_Items:
         Pr_It = int(Item.Price)
@@ -25,6 +26,6 @@ def index(request):
 
 
     return render(request, 'main/index.html', {'Slider_Item': Slider_Item, 'Product_Item': Product_Items,
-    'Tkhfif': k, 'limit_t': limit_t, 'Category_Items': Category_Items, 'Advertising1_Item': Advertising1_Items, 'Advertising2_Item': Advertising2_Items,'Prit':Product_Items})
+    'Tkhfif': k, 'limit_t': limit_t, 'Category_Items': Category_Items, 'Advertising1_Item': Advertising1_Items, 'Advertising2_Item': Advertising2_Items,'Prit':Product_Items, 'News_Items': News_Items})
 
 
