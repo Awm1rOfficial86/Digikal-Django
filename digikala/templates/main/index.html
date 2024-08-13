@@ -412,7 +412,8 @@
       </div>
 
 {% for Pro_Item in Product_Item %}
-      	<div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white rounded-lg">
+      	{% if Pro_Item.OfferPrice %}
+            <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white rounded-lg">
         <div class="p-4 ">
           <img class="rounded-lg  w-28 mx-auto"
             src="{{ Pro_Item.Pictur.url }}" />
@@ -423,14 +424,17 @@
           </h2>
         </div>
         <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16">
-            <h3 class="capitalize text-right  text-black text-sm font-medium">  {{ Pro_Item.OfferPrice }}تومان</h3>
+          <div style="direction: ltr;" class="flex justify-between gap-x-10">
+            <h3 class="capitalize text-right  text-black text-sm font-medium" style="direction: rtl">{{ Pro_Item.OfferPrice }}تومان </h3>
               {% if Pro_Item.OfferPrice %}
 
               {% endif %}
+          
             <h3
               class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              {{ Tkhfif }}%</h3>
+              {{ Tkhfif }}%
+            
+            </h3>
 
           </div>
           <div>
@@ -440,6 +444,33 @@
           <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">{{ Pro_Item.Price }}تومان</h4>
         </div>
       </div>
+            {% else %}
+
+             <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white rounded-lg">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="{{ Pro_Item.Pictur.url }}" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>{{ Pro_Item.Name }}
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16 " >
+            <h3 class="capitalize text-right  text-black text-sm font-medium" style="direction: rtl">{{ Pro_Item.Price }}تومان </h3>
+              {% if Pro_Item.OfferPrice %}
+
+              {% endif %}
+          
+       
+
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+      	{% endif %} 
       {% endfor %}
 
 
