@@ -1,5 +1,5 @@
 {% extends 'main/base.html' %}
-
+{% load course_tags %}
 {% block content %}
   <img
     src="https://dkstatics-public.digikala.com/digikala-adservice-banners/4a7f0599be8dcdded4b9c3c55b3a9908f9e27735_1723350373.jpg?x-oss-process=image/quality,q_95/format,webp"
@@ -10,7 +10,7 @@
   <header dir="rtl" class='flex py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
     <div class='flex flex-wrap items-center gap-5 w-full '>
 
-      <a href="javascript:void(0)"><img src="/assets/img/logo.svg" alt="logo" style="width: 108px;">
+      <a href="javascript:void(0)"><img src="https://www.digikala.com/statics/img/svg/logo.svg" alt="logo" style="width: 108px;">
       </a>
 
 
@@ -411,7 +411,7 @@
 
       </div>
 
-{% for Pro_Item in Product_Item %}
+{% for Pro_Item in Product_Item|slice:'20' %}
       	{% if Pro_Item.OfferPrice %}
             <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white rounded-lg">
         <div class="p-4 ">
@@ -429,14 +429,13 @@
               {% if Pro_Item.OfferPrice %}
 
               {% endif %}
-          
+
             <h3
               class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
-              {% for Item in Product_Item %}
-                  
-              {% endfor %}
-              
-            
+              {% discount_calculation Pro_Item.Price Pro_Item.OfferPrice %}%
+
+
+
             </h3>
 
           </div>
@@ -447,33 +446,8 @@
           <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">{{ Pro_Item.Price }}تومان</h4>
         </div>
       </div>
-            {% else %}
 
-             <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white rounded-lg">
-        <div class="p-4 ">
-          <img class="rounded-lg  w-28 mx-auto"
-            src="{{ Pro_Item.Pictur.url }}" />
-        </div>
-        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
-          <h2>{{ Pro_Item.Name }}
-
-          </h2>
-        </div>
-        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
-          <div style="direction: ltr;" class="flex justify-between gap-x-16 " >
-            <h3 class="capitalize text-right  text-black text-sm font-medium" style="direction: rtl">{{ Pro_Item.Price }}تومان </h3>
-              {% if Pro_Item.OfferPrice %}
-
-              {% endif %}
-          
-       
-
-          </div>
-          <div>
-          </div>
-        </div>
-      </div>
-      	{% endif %} 
+      	{% endif %}
       {% endfor %}
 
 
@@ -540,6 +514,7 @@ width: 75%;    margin-top: 2%;
         <span class="absolute bg-red-500 text-white text-xs px-2 py-1 rounded-full bottom-1">{{ Tkhfif }}%</span>
       </div>
     </div>
+              
           {% endif %}
       {% endfor %}
 
@@ -881,15 +856,19 @@ width: 75%;    margin-top: 2%;
         
         <!-- Repeat the above block for each product item -->
         {% for Item in Product_Item %}
-        	<div
+            {% if Item.Count > 1 %}
+             	<div
           class=" popular1 flex items-center space-x-2 border border-l-1 border-t-0 border-b-1 border-r-0 border-l-0 h-24  ">
           <img
             src="{{ Item.Pictur.url }}"
             alt="Product Image" class="w-16 h-16 object-cover">
-          <span class="text-blue-500 font-bold">{{ Item.id }}</span>
+          <span class="text-blue-500 font-bold"></span>
 
           <div class="text-sm">{{ Item.Name }}</div>
         </div>
+            	
+            {% endif %}
+
         {% endfor %}
         
       
@@ -1291,7 +1270,7 @@ width: 75%;    margin-top: 2%;
       <div class="flex flex-col md:flex-row justify-between items-center text-gray-700 text-center md:text-right mb-8">
         <div class="flex flex-col items-center mb-6 md:mb-0">
 
-          class="w-12 h-12 mb-2">
+
           <span>ضمانت اصل بودن کالا</span>
         </div>
         <div class="flex flex-col items-center mb-6 md:mb-0">
