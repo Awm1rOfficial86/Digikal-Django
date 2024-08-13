@@ -22,5 +22,7 @@ def index(request):
 
 
 
+
+
     return render(request, 'main/index.html', {'Slider_Item': Slider_Item, 'Product_Item': Product_Items,
     'Tkhfif': k, 'limit_t': limit_t, 'Category_Items': Category_Items, 'Advertising1_Item': Advertising1_Items, 'Advertising2_Item': Advertising2_Items})
