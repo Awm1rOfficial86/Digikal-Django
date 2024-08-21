@@ -1,3 +1,5 @@
+
+
 #list h2 {
   direction: rtl;
   margin-right: 7%;
@@ -875,17 +877,39 @@ border-radius: 51%;
   }
   }
 
-  
-@media (max-width: 1024px){
-  .nav{
+
+@media (max-width: 1024px) {
+  .nav {
     height: 0px;
   }
-  }
+
+}
 
 
-  
+
+
 @media (max-width: 1280px){
   .nav-list a{
    font-size: 0.73rem;
   }
+
   }
+
+.galeri{
+  width: 950px;
+}
+@media (max-width: 1024px) {
+
+  .galeri{
+   display: none;
+
+  }
+}
+
+@media (max-width: 640px) {
+  .mad{
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+}

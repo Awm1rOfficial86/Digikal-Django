@@ -193,7 +193,7 @@
           <div>
         </li>
 
-        <li style="color: #73777d;"><a href="">شگفت‌انگیزها</a></li>
+        <li style="color: #73777d;"><a href="{% url 'product' %}">فروشگاه</a></li>
         <li style="color: #73777d;"><a href="">سوپرمارکت</a></li>
         <li style="color: #73777d;"><a href="">کارت هدیه</a></li>
         <li style="color: #73777d;"><a href=""> پرفروش‌ترین‌ها</a></li>
@@ -413,7 +413,7 @@
 
 {% for Pro_Item in Product_Item|slice:'20' %}
       	{% if Pro_Item.OfferPrice %}
-            <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white rounded-lg">
+            <a class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white rounded-lg" href="single/{{ Pro_Item.id }}">
         <div class="p-4 ">
           <img class="rounded-lg  w-28 mx-auto"
             src="{{ Pro_Item.Pictur.url }}" />
@@ -426,9 +426,6 @@
         <div class="flex justify-between  p-4 capitalize text-xl font-medium">
           <div style="direction: ltr;" class="flex justify-between gap-x-10">
             <h3 class="capitalize text-right  text-black text-sm font-medium" style="direction: rtl">{{ Pro_Item.OfferPrice }}تومان </h3>
-              {% if Pro_Item.OfferPrice %}
-
-              {% endif %}
 
             <h3
               class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
@@ -445,7 +442,7 @@
         <div>
           <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">{{ Pro_Item.Price }}تومان</h4>
         </div>
-      </div>
+      </a>
 
       	{% endif %}
       {% endfor %}
@@ -507,12 +504,12 @@ width: 75%;    margin-top: 2%;
 
       {% for ProItm in Product_Item|slice:'5' %}
           {% if ProItm.Offer %}
-          	<div class="flex-none w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center relative">
+          	<a class="flex-none w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center relative" href="single/{{ ProItm.id }}">
         <img
           src="{{ ProItm.Pictur.url }}"
           alt="Product 6" class="w-full h-full object-cover rounded-full">
         <span class="absolute bg-red-500 text-white text-xs px-2 py-1 rounded-full bottom-1">{% discount_calculation ProItm.Price ProItm.OfferPrice %}%</span>
-      </div>
+      </a>
     </div>
 
 
@@ -610,12 +607,12 @@ width: 75%;    margin-top: 2%;
       <div class="slider-track">
         <!-- Slide 1 -->
      {% for Item in Product_Item|slice:'14' %}
-      	 <div class="slide flex justify-around items-center bg-white p-4 rounded shadow">
+      	 <a class="slide flex justify-around items-center bg-white p-4 rounded shadow" href="single/{{ Item.id }}">
           <img
             src="{{ Item.Pictur.url }}"
             alt="Logo 6" class="h-24 ">
 
-        </div>
+        </a>
 
       {% endfor %}
 
@@ -639,16 +636,21 @@ width: 75%;    margin-top: 2%;
       <!-- Smart Watches -->
    
       <!-- Mobile Phones -->
-    {% for Item in Product_Item|slice:'4' %}
+    {% for Item in Category_Items|slice:'4' %}
     	  <div class="bg-white  rounded shadow">
-        <h2 class="text-xl font-semibold ">{{ Item.Category }}</h2>
+        <h2 class="text-xl font-semibold ">{{ Item.Name}}</h2>
         <h6>بر اساس سلیقه شما</h6>
           <div class=" list-img grid grid-cols-2">
        	 
-          <img
-            src="{{ Item.Pictur.url }}"
-            alt="Headphone 1" class="w-full h-auto border border-r-1 border-b-1 border-t-0 border-l-0">
-
+         {% for Item1 in Product_Item %}
+          	{% if Item1.Category.Name == Item.Name  %}
+          	<a href="single/{{ Item1.id }}">
+            <img
+            src="{{ Item1.Pictur.url }}"
+            alt="Headphone 1" class="w-full h-auto border border-r-1 border-b-1 border-t-0 border-l-0" >
+            </a>
+          {% endif %}
+          {% endfor %}
     
            </div>
        
@@ -712,7 +714,7 @@ width: 75%;    margin-top: 2%;
         
         <!-- Repeat the above block for each product item -->
         {% for Item in Product_Item|slice:'12' %}
-             	<div
+             	<a href="single/{{ Item.id }}"
           class=" popular1 flex items-center space-x-2 border border-l-1 border-t-0 border-b-1 border-r-0 border-l-0 h-24  ">
           <img
             src="{{ Item.Pictur.url }}"
@@ -720,7 +722,7 @@ width: 75%;    margin-top: 2%;
           <span class="text-blue-500 font-bold"></span>
 
           <div class="text-sm">{{ Item.Name }}</div>
-        </div>
+        </a>
 
 
 
@@ -751,13 +753,13 @@ width: 75%;    margin-top: 2%;
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         {% for Item in Product_Item|slice:'12' %}
       {% if Item.Offer %}
-      	<div class="p-4 border rounded shadow-sm">
+      	<a class="p-4 border rounded shadow-sm" href="single/{{ Item.id }}">
         <img
           src="{{ Item.Pictur.url }}"
           alt="Product Image" class="  object-cover mb-2">
         <p class="text-right text-gray-800">{{ Item.Price}} تومان</p>
         <p class="text-right line-through text-gray-500">{{ Item.OfferPrice }} تومان </p>
-      </div>
+      </a>
       {% endif %}
         {% endfor %}
 
@@ -777,7 +779,7 @@ width: 75%;    margin-top: 2%;
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         <!-- Product Item -->
         {% for Item in Product_Item|slice:'12' %}
-             	<div
+             	<a href="single/{{ Item.id }}"
           class=" popular1 flex items-center space-x-2 border border-l-1 border-t-0 border-b-1 border-r-0 border-l-0 h-24  ">
           <img
             src="{{ Item.Pictur.url }}"
@@ -785,7 +787,7 @@ width: 75%;    margin-top: 2%;
           <span class="text-blue-500 font-bold"></span>
 
           <div class="text-sm">{{ Item.Name }}</div>
-        </div>
+        </a>
 
 
 
@@ -800,19 +802,24 @@ width: 75%;    margin-top: 2%;
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
 
       <!-- Smart Watches -->
-      {% for Item in Product_Item|slice:'4' %}
+       {% for Item in Category_Items|slice:'4' %}
     	  <div class="bg-white  rounded shadow">
-        <h2 class="text-xl font-semibold ">{{ Item.Category }}</h2>
+        <h2 class="text-xl font-semibold ">{{ Item.Name}}</h2>
         <h6>بر اساس سلیقه شما</h6>
           <div class=" list-img grid grid-cols-2">
-
-          <img
-            src="{{ Item.Pictur.url }}"
+       	 
+         {% for Item1 in Product_Item %}
+          	{% if Item1.Category.Name == Item.Name  %}
+          	<a href="single/{{ Item1.id }}">
+            <img
+            src="{{ Item1.Pictur.url }}"
             alt="Headphone 1" class="w-full h-auto border border-r-1 border-b-1 border-t-0 border-l-0">
-
-
+            </a>
+          {% endif %}
+          {% endfor %}
+    
            </div>
-
+       
         <a href="#" class=" mt-2 inline-block">مشاهده</a>
       </div>
     {% endfor %}

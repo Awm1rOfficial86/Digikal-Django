@@ -1,0 +1,214 @@
+<header dir="rtl" class='flex py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
+    <div class='flex flex-wrap items-center gap-5 w-full '>
+
+      <a href="javascript:void(0)"><img src="https://www.digikala.com/statics/img/svg/logo.svg" alt="logo" style="width: 108px;">
+      </a>
+
+
+
+      <div class='flex lg:ml-auto max-lg:w-full'>
+        <div
+          class='flex xl:w-80 max-xl:w-full bg-gray-100 px-6 py-3 rounded outline outline-transparent focus-within:outline-[#ff1900] focus-within:bg-transparent'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px"
+            class="cursor-pointer fill-gray-400 text-right">
+            <path
+              d="m190.707 180.101-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 0 0 5.303 2.197 7.498 7.498 0 0 0 5.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z">
+            </path>
+          </svg>
+          <input type='text' placeholder='جستجو ...' class='w-full text-sm bg-transparent rounded outline-none pr-2' />
+
+        </div>
+      </div>
+
+      <div id="log" class="flex items-center justify-center gap-4 ">
+        <button
+          class="px-4 py-2 border flex gap-2 border-slate-200  rounded-lg text-black  hover:shadow transition duration-150">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6 w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+          </svg>
+
+          <span>ورود | ثبت نام</span>
+        </button>
+
+
+        <button
+          class="px-4 py-2 border flex gap-3 border-r-2 border-t-0 border-b-0 border-l-0   text-black   transition duration-150 pr-5">
+          <img src="/assets/img/2849824-basket-buy-market-multimedia-shop-shopping-store_107977(1).png" alt=""
+            class="size-8 w-7 h-7">
+
+
+        </button>
+      </div>
+
+
+
+    </div>
+
+  </header>
+
+
+
+
+
+
+  <!--navbar-->
+
+  <nav class="nav relative">
+    <div class="wrapper container1 mt-4 ">
+
+
+      <ul class="nav-list">
+        <div class="top">
+          <label for="" class="btn close-btn"><i class='bx bx-x'></i></label>
+        </div>
+
+
+        <li>
+          <a href="" class="desktop-item ">دسته‌بندی کالاها <span><i class='bx bx-chevron-down'></i></span></a>
+          <input type="checkbox" id="showMega" />
+          <label for="showMega" class="mobile-item">دسته‌بندی کالاها <span><i class='bx bx-chevron-down'></i></label>
+          <div class="mega-box text-right flex rounded-b-lg shadow-2xl ">
+            <div class=" overflow-auto "
+              style="width: 16.5%;height: 100%;overflow-y: auto;direction: rtl;text-align: right;background-color: #f2f4f7;">
+              <ul style="">
+                {% for Item in Category_Items %}
+                	<li style="height: 65px;padding-right: 1.5rem;margin-top: 2%;margin-top: -15%;">{{ Item.Name }}</li>
+                {% endfor %}
+
+
+
+              </ul>
+            </div>
+            <div
+              style="width: 83.5%;height: 100%;overflow-y: auto;direction: rtl;text-align: right;display: flex;background-color: white;">
+              <div>
+                <ul>
+                  <li style="height: 65px;padding-right: 2.5rem;margin-top: -15%;" class="font-bold">برندهای مختلف گوشی
+                    موبایل > </li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center font-normal"> دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+
+
+                </ul>
+              </div>
+
+              <div>
+                <ul>
+                  <li style="height: 65px;padding-right: 2.5rem;margin-top: -15%;" class="font-bold">برندهای مختلف گوشی
+                    موبایل > </li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center font-normal"> دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+
+
+                </ul>
+              </div>
+
+              <div>
+                <ul>
+                  <li style="height: 65px;padding-right: 2.5rem;margin-top: -15%;" class="font-bold">برندهای مختلف گوشی
+                    موبایل > </li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center font-normal"> دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+
+
+                </ul>
+              </div>
+
+              <div>
+                <ul>
+                  <li style="height: 65px;padding-right: 2.5rem;margin-top: -15%;" class="font-bold">برندهای مختلف گوشی
+                    موبایل > </li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center font-normal"> دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+
+
+                </ul>
+              </div>
+
+
+
+            </div>
+
+
+
+
+
+
+          </div>
+          <div>
+        </li>
+
+        <li style="color: #73777d;"><a href="{% url 'product' %}">فروشگاه من</a></li>
+        <li style="color: #73777d;"><a href="">سوپرمارکت</a></li>
+        <li style="color: #73777d;"><a href="">کارت هدیه</a></li>
+        <li style="color: #73777d;"><a href=""> پرفروش‌ترین‌ها</a></li>
+        <li style="color: #73777d;"><a href="">تخفیف‌ها و پیشنهادها</a></li>
+        <li style="color: #73777d;"><a href="">سوالی دارید؟</a></li>
+        <li style="color: #73777d;"><a href="">در دیجی‌کالا بفروشید!</a></li>
+    </div>
+
+    <!--  <li>
+              <a href="" class="desktop-item">Page <span><i class='bx bx-chevron-down'></i> </a>
+                <input type="checkbox"  id="showdrop2">
+                <label for="showdrop2" class="mobile-item">Page <span><i class='bx bx-chevron-down'></i></label>
+                  <ul class="drop-menu2">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Faq</a></li>
+                    <li><a href="">Page 404</a></li>
+                  </ul>
+              </li>
+              -->
+    <li class="icons">
+      <a href="cart.html">
+
+      </a>
+
+    </li>
+    </ul>
+    <hr>
+
+
+
+    </div>
+  </nav>
