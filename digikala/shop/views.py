@@ -23,14 +23,10 @@ def index(request):
 
 def single(request, id):
     Sin_Id = Product.objects.get(id=id)
-    Color_Item = Color.objects.all()
-    Color_Item2 = Color2.objects.all()
-    Color_Item3 = Color3.objects.all()
-    Color_Item4 = Color4.objects.all()
-    Color_Item5 = Color5.objects.all()
+    Color_Item = Color.objects.filter(Product=id)
+    Option_Item = Option.objects.filter(Product=id)
     return render(request, 'main/single.html',
-                  {'Sin_Id': Sin_Id, 'Color_Item': Color_Item, 'Color_Item2': Color_Item2, 'Color_Item3': Color_Item3,
-                   'Color_Item4': Color_Item4, 'Color_Item5': Color_Item5})
+                  {'Sin_Id': Sin_Id, 'Color_Item': Color_Item, 'Option_Item': Option_Item})
 
 
 def product(request):

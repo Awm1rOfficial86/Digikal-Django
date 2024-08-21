@@ -310,42 +310,10 @@
                         <span class="font-bold">رنگ:</span>
                     <div class="flex items-center mt-2">
                        {% for Item in Color_Item%}
-
-
-                            	{% if Sin_Id.Color.Name == Item.Name %}
-                            		<div class="w-6 h-6 border-2 border-800 bg-800 rounded-full mr-2" style="background: {{ Item.HexColor }}"></div>
+                           
+                           		<div class="w-6 h-6 border-2 border-800 bg-800 rounded-full mr-2" style="background: {{ Item.HexColor }}"></div>
                             <span class="text-gray-800 ml-2">{{ Item.Name }}</span>
-                            	{% endif %}
-                           {% for Item1 in Color_Item2 %}
-                           	{% if Sin_Id.Color2.Name == Item1.Name %}
-                            		<div class="w-6 h-6 border-2 border-800 bg-800 rounded-full mr-2" style="background: {{ Item1.HexColor }}"></div>
-                            <span class="text-gray-800 ml-2">{{ Item1.Name }}</span>
-                            	{% endif %}
-                           {% endfor %}
-
-                            {% for Item2 in Color_Item3 %}
-                           	{% if Sin_Id.Color3.Name == Item2.Name %}
-                            		<div class="w-6 h-6 border-2 border-800 bg-800 rounded-full mr-2" style="background: {{ Item2.HexColor }}"></div>
-                            <span class="text-gray-800 ml-2">{{ Item2.Name }}</span>
-                            	{% endif %}
-                           {% endfor %}
-                            {% for Item3 in Color_Item4 %}
-                           	{% if Sin_Id.Color4.Name == Item3.Name %}
-                            		<div class="w-6 h-6 border-2 border-800 bg-800 rounded-full mr-2" style="background: {{ Item3.HexColor }}"></div>
-                            <span class="text-gray-800 ml-2">{{ Item3.Name }}</span>
-                            	{% endif %}
-                           {% endfor %}
-                            {% for Item4 in Color_Item5 %}
-                           	{% if Sin_Id.Color5.Name == Item4.Name %}
-                            		<div class="w-6 h-6 border-2 border-800 bg-800 rounded-full mr-2" style="background: {{ Item4.HexColor }}"></div>
-                            <span class="text-gray-800 ml-2">{{ Item4.Name }}</span>
-                            	{% endif %}
-                           {% endfor %}
-
-
-
-
-
+                           
                        {% endfor %}
  </div>
                     </div>
@@ -380,11 +348,11 @@
                 <div class=" p-4 rounded-lg">
                     <h2 class="font-bold text-gray-800 mb-2">ویژگی‌ها</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="text-sm bg-gray-100 p-4 rounded-md">نسخه سیستم عامل: Android 11</div>
-                        <div class="text-sm bg-gray-100 p-4 rounded-md">فناوری صفحه نمایش: IPS</div>
-                        <div class="text-sm bg-gray-100 p-4 rounded-md">رزولوشن دوربین: 50 مگاپیکسل</div>
-                        <div class="text-sm bg-gray-100 p-4 rounded-md">اقلام همراه: دفترچه راهنما شارژر</div>
-                         <div class="text-sm bg-gray-100 p-4 rounded-md">اقلام همراه: دفترچه راهنما شارژر</div>
+                        {% for Item in Option_Item %}
+                        	<div class="text-sm bg-gray-100 p-4 rounded-md">{{ Item.Title }}: {{ Item.Value }}</div>
+                        {% endfor %}
+                        
+                        
                     </div>
                     <div class="text-center mt-4">
                         <button class="text-blue-500">مشاهده همه ویژگی‌ها</button>
